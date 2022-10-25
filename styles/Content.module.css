@@ -1,0 +1,497 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  min-height: 100vh;
+  border: solid 1px #dddddd80;
+  border-top: 0;
+  border-bottom: 0;
+  padding: .5em 0;
+  position: relative;
+}
+
+@media (max-width:650px) {
+  .content {
+    width: 100%;
+    border: none;
+  }
+}
+
+.content .header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  position: 100%;
+}
+
+.content .refresh_section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  font-size: .9em;
+  position: sticky;
+  inset: 0;
+  background-color: #fff5;
+  backdrop-filter: blur(20px);
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  /* width: 100%; */
+}
+
+.content .refresh_section .title {
+  font-weight: 700;
+}
+
+.content .refresh_section .refresh_icon {
+  color: var(--color-primary-1);
+  font-size: 1.7em;
+  rotate: 0deg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .6s ease-in-out;
+  cursor: pointer;
+}
+
+.content .refresh_section .refresh_icon:hover {
+  rotate: 360deg;
+}
+
+.content .header .tweet_box {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1em;
+}
+
+.content .header .tweet_box img {
+  margin-right: 1em;
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+}
+
+.content .header .tweet_box form {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - calc(55px + 1em));
+}
+
+.content .header .tweet_box form input[type='text'] {
+  background-color: transparent;
+  font-size: 1.3em;
+  border: none;
+  padding: 1em 0;
+}
+
+.content .header .tweet_box form input[type='text']:focus {
+  outline: none;
+}
+
+.content .header .tweet_box form .options {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .header .tweet_box form .options .icons {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.content .header .tweet_box form .options .icon {
+  margin-right: .8em;
+  cursor: pointer;
+  scale: 1;
+  color: var(--color-primary-1);
+  font-size: 1.2em;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .header .tweet_box form .options .icon:hover {
+  scale: 1.2;
+}
+
+.content .header .tweet_box form .options .btn_submit {
+  background-color: var(--color-primary-1);
+  color: #fff;
+  border-radius: 30px;
+  padding: .5em 1em;
+  font-size: 1em;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  filter: opacity(.5);
+  pointer-events: none;
+}
+
+.content .header .tweet_box form .options .btn_submit_after {
+  filter: opacity(1);
+  pointer-events: all;
+}
+
+.content .header .tweet_box form .options .btn_submit_after:hover {
+  filter: saturate(.5);
+}
+
+.content .header .tweet_box form .add_img_box {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: var(--color-primary-1);
+  color: #fff;
+  padding: 0 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.content .header .tweet_box form .add_img_box input[type='text'] {
+  color: #fff;
+  width: max-content;
+  font-size: 1em;
+  width: 80%;
+}
+
+.content .header .tweet_box form .add_img_box input[type='text']::placeholder {
+  color: #fffa;
+}
+
+.content .header .tweet_box form .add_img_box .add_img_btn {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.content .header .tweet_box form .show_img_box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 1em;
+}
+
+.content .header .tweet_box form .show_img_box .img_url {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0;
+  box-shadow: 0 5px 10px #33333350;
+}
+
+.content .header .tweet_box form .show_img_box .cancel_img_btn {
+  margin: .5em 0 0 .5em;
+  position: absolute;
+  cursor: pointer;
+  color: #fff;
+  font-size: .8em;
+  border-radius: 100%;
+  background-color: #3338;
+  font-weight: bold;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------------- tweet ------------------------------- */
+/*------------------------------- tweet ------------------------------- */
+/*------------------------------- tweet ------------------------------- */
+/*------------------------------- tweet ------------------------------- */
+/*------------------------------- tweet ------------------------------- */
+
+.content .tweet_post_box {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  flex-wrap: nowrap;
+  border-top: solid 1px #dddddd80;
+  background-color: transparent;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.content .tweet_post_box:hover {
+  background-color: #dddddd50;
+}
+
+.content .tweet_post_box .profile_img {
+  margin-right: 1em;
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+}
+
+.content .tweet_post_box .post {
+  width: calc(100% - calc(55px + 1em));
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content .tweet_post_box .post .top {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -.5em;
+}
+
+.content .tweet_post_box .post .top .title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.content .tweet_post_box .post .top .title .name {
+  font-weight: bold;
+}
+
+.content .tweet_post_box .post .top .title .username {
+  color: #536471;
+  margin: 0 .5em;
+}
+
+.content .tweet_post_box .post .top .title .date {
+  color: #536471;
+  font-size: .5em;
+}
+
+.content .tweet_post_box .post .top .option {
+  padding: .5em;
+  border-radius: 100%;
+  background-color: transparent;
+  transition: .3s;
+  font-size: 1.2em;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content .tweet_post_box .post .top .option:hover {
+  background: var(--color-primary-1-hidden);
+  color: var(--color-primary-1);
+}
+
+.content .tweet_post_box .post .descrption {
+  display: flex;
+}
+
+.content .tweet_post_box .post .post_img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 1em 0;
+  object-fit: cover;
+}
+
+.content .tweet_post_box .post .options {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.content .tweet_post_box .post .options .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #536471;
+  cursor: pointer;
+
+}
+
+.content .tweet_post_box .post .options .icon .sym {
+  display: flex;
+  padding: .5em;
+  background-color: transparent;
+  border-radius: 100%;
+  transition: .3s;
+}
+
+.content .tweet_post_box .post .options .sym_1:hover {
+  color: #1d9bf0;
+}
+
+.content .tweet_post_box .post .options .sym_1:hover .sym {
+  background-color: #1d9bf020;
+}
+
+.content .tweet_post_box .post .options .sym_2:hover {
+  color: #1bd578;
+}
+
+.content .tweet_post_box .post .options .sym_2:hover .sym {
+  background-color: #1bd57820;
+}
+
+.content .tweet_post_box .post .options .sym_3:hover {
+  color: #f01d71;
+}
+
+.content .tweet_post_box .post .options .sym_3:hover .sym {
+  background-color: #f01d7120;
+}
+
+.content .tweet_post_box .post .options .sym_4:hover {
+  color: #1d9bf0;
+}
+
+.content .tweet_post_box .post .options .sym_4:hover .sym {
+  background-color: #1d9bf020;
+}
+
+.content .tweet_post_box .post .options .icon .count {
+  margin-left: .5em;
+  transition: .3s;
+}
+
+.content .tweet_post_box .post .add_comment_box {
+  padding: .5em 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.content .tweet_post_box .post .add_comment_box input[type='text'] {
+  width: 100%;
+  background-color: #0001;
+  border: none;
+  font-size: 1em;
+  padding: .5em 1em;
+  border-radius: 5px;
+}
+
+.content .tweet_post_box .post .add_comment_box input[type='text']::placeholder {
+  color: #0005;
+}
+
+.content .tweet_post_box .post .add_comment_box input[type='text']:focus,
+.content .tweet_post_box .post .add_comment_box .add_comment_btn {
+  outline: none;
+}
+
+.content .tweet_post_box .post .add_comment_box .add_comment_btn {
+  color: var(--color-primary-1);
+  background-color: var(--color-primary-1-hidden);
+  border: none;
+  width: max-content;
+  padding: .1em 1em;
+  border-radius: 5px;
+  height: 100%;
+  margin: 0 0 0 1em;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.content .tweet_post_box .post .add_comment_box .add_comment_btn:hover {
+  background-color: var(--color-primary-1);
+  color: #fff;
+}
+
+.content .tweet_post_box .post .add_comment_box .add_comment_btn_no_effect {
+  filter: saturate(.2);
+  pointer-events: none;
+}
+
+.signBtn {
+  border: none;
+  padding: .7em 2em;
+  margin-left: .5em;
+  margin-top: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--color-primary-1-hidden);
+  color: var(--color-primary-1);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.signBtn:hover {
+  color: #fff;
+  background-color: var(--color-primary-1);
+
+}
+
+
+
+
+
+/*------------------------------- comment ------------------------------- */
+/*------------------------------- comment ------------------------------- */
+/*------------------------------- comment ------------------------------- */
+/*------------------------------- comment ------------------------------- */
+/*------------------------------- comment ------------------------------- */
+
+.content .comment_box {
+  width: 100%;
+  display: flex;
+  padding: 1em 0;
+  flex-wrap: nowrap;
+}
+
+.content .comment_box img {
+  width: 30px;
+  border: 1px solid transparent;
+  padding: 1px;
+  height: 30px;
+  margin-right: 1em;
+  border-radius: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.content .comment_box:hover img {
+  border: solid 1px var(--color-primary-1);
+}
+
+.content .comment_box .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .comment_box .right .title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: .9em;
+}
+
+.content .comment_box .right .title .name {
+  font-weight: bold;
+}
+
+.content .comment_box .right .title .username {
+  color: #536471;
+  margin: 0 .5em;
+}
+
+.content .comment_box .right .title .date {
+  color: #536471;
+  font-size: .7em;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+
+}
+
+.content .comment_box .right .comment {
+  margin-top: .3em;
+}

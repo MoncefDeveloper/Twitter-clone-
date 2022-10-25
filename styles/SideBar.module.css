@@ -1,0 +1,154 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1em 1em;
+  /* border: solid; */
+  font-size: 1.3em;
+  position:sticky;
+  inset: 0;
+}
+
+.sidebar .logo {
+  color: var(--color-primary-1);
+  padding: .5em;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.35em;
+  background: transparent;
+  transition: .3s;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.sidebar .logo:hover {
+  background: var(--color-primary-1-hidden);
+
+}
+
+.sidebar .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: .5em;
+  margin: .15em 0;
+  background-color: transparent;
+  transition: .3s;
+  cursor: pointer;
+  width: max-content;
+  border-radius: 30px;
+}
+
+.sidebar .row:hover {
+  background-color: #ddd;
+}
+
+.sidebar .row .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.sidebar .row .title {
+  font-size: inherit;
+  display: none;
+}
+
+.sidebar .btn_prem,
+.sidebar .btn_plume {
+  background-color: var(--color-primary-1);
+  color: #fff;
+  padding: .8em 2em;
+  border-radius: 30px;
+  margin-top: 1em;
+  text-align: center;
+  font-size: .8em;
+  font-weight: bold;
+  filter: saturate(1);
+  transition: .3s;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .btn_prem:hover,
+.sidebar .btn_plume:hover {
+  filter: saturate(0.7);
+}
+
+.sidebar_bottom{
+  position: fixed;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border-top: solid 1px #dddddd80;
+  top: calc(100% - 52px);
+  z-index: 2;
+  padding: 1em ;
+  background-color: #fff9;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+.sidebar_bottom .row{
+  display: flex;
+  border-radius: 100%;
+  background-color: transparent;
+  transition: .3s;
+  padding: .3em;
+  font-size: 1.7em;
+} 
+.sidebar_bottom .row:hover{
+  background-color: #aaaaaa85;
+}
+
+
+
+@media (max-width:1300px) {
+  .sidebar .btn_plume {
+    display: flex;
+    padding: .5em;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+  }
+
+  .sidebar {
+    align-items: center;
+
+  }
+}
+
+@media (min-width:1300px) {
+  .sidebar .row {
+    padding: .5em 1.5em .5em .6em;
+  }
+
+  .sidebar .btn_prem {
+    display: block;
+  }
+
+  .sidebar .row .title {
+    display: flex;
+  }
+
+  .sidebar .row .icon {
+    padding: 0 1em 0 0;
+  }
+
+  .sidebar .row {
+    margin: .15em .7em .15em 0;
+
+  }
+}
+@media (max-width:650px) {
+  .sidebar{
+    display: none;
+  }
+  .sidebar_bottom{
+    display: flex;
+  }
+}

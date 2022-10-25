@@ -9,12 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^1.0.6",
+    "@sanity/image-url": "^1.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "next": "12.3.1",
+    "next-auth": "^4.14.0",
+    "next-sanity": "^0.8.4",
+    "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.4.0",
+    "react-timeago": "^7.1.0",
+    "react-twitter-embed": "^4.0.4"
   },
   "devDependencies": {
-    "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "@types/node": "18.8.3",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
