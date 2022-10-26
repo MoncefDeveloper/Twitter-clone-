@@ -2,7 +2,7 @@ import Head from "next/head";
 import Content from "../components/Content/Content";
 import { Tweets } from "../functions/fetchData";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const tweets = await Tweets();
   return {
     props: { tweets },
