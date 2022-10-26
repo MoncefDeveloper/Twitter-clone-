@@ -21,9 +21,9 @@ function Content({ tweets: tweetsProps }) {
   return (
     <div>
       <Header refresh={refresh} />
-      {/* {tweets.map((tweet, id) => (
+      {tweets.map((tweet, id) => (
         <Tweet refresh={refresh} tweets={tweets} details={tweet} key={id} />
-      ))} */}
+      ))}
     </div>
   );
 }
