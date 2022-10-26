@@ -2,11 +2,12 @@ import Head from "next/head";
 import Content from "../components/Content/Content";
 import { Tweets } from "../functions/fetchData";
 
-export const getStaticProps = async () => {
-  const tweets = await Tweets();
-  return { props: { tweets } };
-};
+// export const getStaticProps = async () => {
+//   const tweets = await Tweets();
+//   return { props: { tweets } };
+// };
 
+// export default function Home({ tweets }) {
 export default function Home({ tweets }) {
   return (
     <>
