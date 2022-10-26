@@ -5,6 +5,7 @@ function MyHead({ title }) {
     <Head>
       <title>{title}</title>
       <meta name="keywords" content="test" />
+      <link rel="icon" href="/twitter.ico" />
     </Head>
   );
 }
