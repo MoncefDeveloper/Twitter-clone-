@@ -4,7 +4,10 @@ import { Tweets } from "../functions/fetchData";
 
 export const getStaticProps = async () => {
   const tweets = await Tweets();
-  return { props: { tweets } };
+  return {
+    props: { tweets },
+    revalidate: 1,
+  };
 };
 
 // export default function Home({ tweets }) {

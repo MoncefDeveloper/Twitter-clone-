@@ -6,7 +6,6 @@
   border: solid 1px #dddddd80;
   border-top: 0;
   border-bottom: 0;
-  padding: .5em 0;
   position: relative;
 }
 
@@ -14,7 +13,14 @@
   .content {
     width: 100%;
     border: none;
+    margin-bottom: calc(52px - .5em);
   }
+
+  .content .refresh_section {
+    box-shadow: 0 5px 10px #1d9bf020;
+
+  }
+
 }
 
 .content .header {
@@ -38,6 +44,7 @@
   height: 50px;
   width: 100%;
   z-index: 2;
+
   /* width: 100%; */
 }
 
