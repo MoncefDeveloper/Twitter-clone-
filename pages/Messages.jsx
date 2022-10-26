@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import MyHead from "../functions/Head";
 
@@ -10,7 +11,14 @@ function Messages() {
         <h2>Messages</h2>
         <p>Soon...</p>
         <picture>
-          <img src="/twitter-2021-10-d.webp" alt="" />
+          <Image
+            src="/twitter-2021-10-d.webp"
+            width={80}
+            objectFit="cover"
+            height={100}
+            layout="fill"
+            alt="img"
+          />
         </picture>
       </div>
     </>

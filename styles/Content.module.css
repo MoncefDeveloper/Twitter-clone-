@@ -294,7 +294,7 @@
 .content .tweet_post_box .post .post_img {
   width: 100%;
   border-radius: 20px;
-  margin: 1em 0;
+  margin: 1em 0 0;
   object-fit: cover;
 }
 
@@ -304,7 +304,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-
+  margin: 1em -0.5em 0;
 }
 
 .content .tweet_post_box .post .options .icon {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import MyHead from "../functions/Head";
 
@@ -10,6 +11,14 @@ function Explore() {
         <p>Soon...</p>
         <picture>
           <img src="/Twitter-generic-hero-whats-happening.avif" alt="" />
+          <Image
+            src="/Twitter-generic-hero-whats-happening.avif"
+            width={80}
+            objectFit="cover"
+            height={100}
+            layout="fill"
+            alt="img"
+          />
         </picture>
       </div>
     </>

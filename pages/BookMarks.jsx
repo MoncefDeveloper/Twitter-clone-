@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import MyHead from "../functions/Head";
 
@@ -9,7 +10,14 @@ function BookMarks() {
         <h2>BookMarks</h2>
         <p>Soon...</p>
         <picture>
-          <img src="621165.jfif" alt="img" />
+          <Image
+            src="/621165.jfif"
+            width={80}
+            objectFit="cover"
+            height={100}
+            layout="fill"
+            alt="img"
+          />
         </picture>
       </div>
     </>

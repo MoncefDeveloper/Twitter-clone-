@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import MyHead from "../functions/Head";
 
@@ -10,9 +11,13 @@ function Notifications() {
         <h2 className="notifications-h2">Notifications</h2>
         <p>Soon...</p>
         <picture>
-          <img
+          <Image
             src="/twitter-tuite-rede-social-1568572082996_v2_1920x1080.png"
-            alt=""
+            width={80}
+            objectFit="cover"
+            height={100}
+            layout="fill"
+            alt="img"
           />
         </picture>
       </div>
