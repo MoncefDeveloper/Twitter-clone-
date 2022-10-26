@@ -2,11 +2,10 @@ import Head from "next/head";
 import Content from "../components/Content/Content";
 import { Tweets } from "../functions/fetchData";
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async () => {
   const tweets = await Tweets();
   return {
     props: { tweets },
-    revalidate: 1,
   };
 };
 
