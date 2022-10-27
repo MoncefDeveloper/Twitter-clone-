@@ -4,8 +4,12 @@ import { sanityClient } from "../../sanity";
 
 const query = groq`
 *[_type == 'tweet'] | order(_createdAt desc){
-    _id,
-    ...
+  _id,
+  username,
+  _updatedAt,
+  text,
+  profileImg,
+  image
   }
 `;
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { Tweets } from "../../functions/fetchData";
 import Loader from "../Loader";
@@ -6,21 +6,14 @@ import Loader from "../Loader";
 import Header from "./Header";
 import Tweet from "./tweet";
 
-function Content() {
-  const [tweets, setTweets] = useState([]);
+function Content({ tweets: tweetsProps }) {
+  const [tweets, setTweets] = useState(tweetsProps);
   const arr = [0, 0, 0, 0];
-  const fetchData = async () => {
-    const tweets = await Tweets();
-    setTweets(tweets);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const refresh = async (loadinMsg, successMsg) => {
     const refreshing = toast.loading(loadinMsg);
-    await fetchData();
+    const tweets = await Tweets();
+    setTweets(tweets);
     toast.success(successMsg, {
       id: refreshing,
     });
