@@ -26,6 +26,7 @@
     "react-twitter-embed": "^4.0.4"
   },
   "devDependencies": {
+    "@sanity/cli": "^2.35.0",
     "@types/node": "18.8.3",
     "eslint": "^8.26.0",
     "eslint-config-airbnb": "^19.0.4",
