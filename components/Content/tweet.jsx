@@ -53,18 +53,15 @@ function Tweet({ details, refresh, tweets }) {
       profileImg: data?.user?.image || "https://links.papareact.com/gll",
       tweet_id: _id,
     };
-    const result = await fetch("/api/addComment", {
+    await fetch("/api/addComment", {
       body: JSON.stringify(tweetInfo),
       method: "POST",
     }).then(() => {
       getComments();
       setInput("");
     });
-    const json = result.json();
-
-    await refresh("Loading... ", "Comment posted");
-    console.log(json);
-    return json;
+    
+    refresh("Loading... ", "Comment posted");
   };
 
   const [hideComment, setHideComment] = useState(true);
