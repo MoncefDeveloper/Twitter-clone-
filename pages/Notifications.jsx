@@ -12,7 +12,8 @@ function Notifications() {
         <p>Soon...</p>
         <picture>
           <Image
-            src="/twitter-tuite-rede-social-1568572082996_v2_1920x1080.png"
+//             src="/twitter-tuite-rede-social-1568572082996_v2_1920x1080.png"
+            src="/621165.jfif"
             width={80}
             objectFit="cover"
             height={100}
